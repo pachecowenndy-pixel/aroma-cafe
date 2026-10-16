@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aroma Café: cafés especiales, sabores artesanales y pequeños momentos para disfrutar.">
+  <title>Aroma Café | Más que café</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Aroma Café, inicio">
+      <span class="brand-icon" aria-hidden="true">☕</span>
+      <span>Aroma <em>Café</em></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <a class="cart-link" href="#carrito" aria-label="Ir al carrito">🛒 <span id="cartCount">0</span></a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">CAFÉ DE ESPECIALIDAD · HECHO CON CALMA</p>
+        <h1>Más que café,<br><span>momentos únicos.</span></h1>
+        <p class="hero-copy">Descubre sabores que inspiran, en un lugar hecho para los amantes del buen café.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#menu">Ver menú <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#nosotros">Nuestra historia</a>
+        </div>
+      </div>
+      <div class="hero-note"><span></span> Tu pausa favorita empieza aquí</div>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark">NUESTRO MENÚ</p>
+          <h2>Cafés <span>especiales</span></h2>
+          <p>Un buen día puede empezar con algo tan sencillo como elegir tu café favorito.</p>
+        </div>
+        <div class="menu-tag">Preparado al momento <span>✦</span></div>
+      </div>
+
+      <div class="content-grid">
+        <div class="product-grid" id="productGrid">
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=85" alt="Taza de espresso recién preparado">
+            <div class="product-info">
+              <p class="product-category">CLÁSICO</p>
+              <h3>Espresso</h3>
+              <p>Intenso y aromático, perfecto para empezar el día.</p>
+              <div class="product-bottom"><strong>$2.00</strong><button class="add-button" data-name="Espresso" data-price="2">Agregar <span>＋</span></button></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85" alt="Cappuccino con arte latte">
+            <div class="product-info">
+              <p class="product-category">FAVORITO</p>
+              <h3>Cappuccino</h3>
+              <p>Equilibrio perfecto entre café, leche y espuma.</p>
+              <div class="product-bottom"><strong>$3.50</strong><button class="add-button" data-name="Cappuccino" data-price="3.5">Agregar <span>＋</span></button></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Café helado con hielo y leche">
+            <div class="product-info">
+              <p class="product-category">REFRESCANTE</p>
+              <h3>Café helado</h3>
+              <p>Una mezcla suave y refrescante para cualquier momento.</p>
+              <div class="product-bottom"><strong>$3.00</strong><button class="add-button" data-name="Café helado" data-price="3">Agregar <span>＋</span></button></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1578988327765-1fc5f7f4f7d5?auto=format&fit=crop&w=800&q=85" alt="Porción de pastel de chocolate">
+            <div class="product-info">
+              <p class="product-category">ALGO DULCE</p>
+              <h3>Pastel de chocolate</h3>
+              <p>El acompañante perfecto para tu pausa de café.</p>
+              <div class="product-bottom"><strong>$4.00</strong><button class="add-button" data-name="Pastel de chocolate" data-price="4">Agregar <span>＋</span></button></div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="cart-panel" id="carrito">
+          <div class="cart-heading"><h2>Tu carrito</h2><span class="cart-badge" id="cartBadge">0</span></div>
+          <div id="cartItems" class="cart-items">
+            <div class="empty-cart"><span>☕</span><p>Tu próxima pausa está esperando.</p><small>Agrega algo rico del menú.</small></div>
+          </div>
+          <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+          <button class="checkout-button" id="checkoutButton">Continuar pedido <span>→</span></button>
+          <p class="cart-disclaimer">Demo educativa · no procesa pagos reales.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="story-section" id="nosotros">
+      <div class="story-image" role="img" aria-label="Granos de café tostado"></div>
+      <div class="story-copy">
+        <p class="eyebrow">UNA TAZA, UNA HISTORIA</p>
+        <h2>El buen café<br>se toma <em>sin prisa.</em></h2>
+        <p>En Aroma Café creemos que los mejores momentos no necesitan mucho: buenos granos, una preparación cuidada y tiempo para disfrutar.</p>
+        <a class="text-link" href="#contacto">Conoce nuestro rincón <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contacto">
+      <div>
+        <p class="eyebrow eyebrow-dark">PASEMOS A SALUDAR</p>
+        <h2>Tu próxima pausa<br><em>te espera.</em></h2>
+      </div>
+      <div class="contact-details">
+        <p>¿Tienes una pregunta o quieres hacer un pedido?</p>
+        <a class="button button-primary" href="mailto:hola@aromacafe.example">Escríbenos <span>↗</span></a>
+        <p class="contact-note">Lun–Sáb · 8:00 a. m. – 7:00 p. m.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-icon">☕</span><span>Aroma <em>Café</em></span></a>
+    <p>Café de especialidad para disfrutar<br>los pequeños grandes momentos.</p>
+    <div class="footer-links"><a href="#inicio">Inicio</a><a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></div>
+    <div class="social-links"><span>SÍGUENOS</span><div><a href="#contacto" aria-label="Instagram">ig</a><a href="#contacto" aria-label="TikTok">tk</a><a href="#contacto" aria-label="Facebook">f</a></div></div>
+    <div class="copyright">© <span id="year"></span> Aroma Café. Proyecto educativo creado con HTML, CSS y JavaScript.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
